@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fix My Ride | Startup-Ready Roadside Assistance</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: #f4f6f8;
+      color: #333;
+    }
+    header {
+      background: linear-gradient(135deg,#c62828,#b71c1c);
+      color: white;
+      padding: 25px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    header h1 { margin: 0; }
+    nav a {
+      color: white;
+      margin-left: 25px;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .hero {
+      padding: 90px 20px;
+      background: url('https://images.unsplash.com/photo-1493238792000-8113da705763') center/cover;
+      text-align: center;
+      color: white;
+    }
+    .hero h2 { font-size: 48px; margin-bottom: 15px; }
+    .hero p { font-size: 18px; max-width: 600px; margin: auto; }
+    .hero button {
+      margin-top: 30px;
+      padding: 16px 36px;
+      font-size: 18px;
+      background: #ffeb3b;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    section { padding: 70px 20px; max-width: 1100px; margin: auto; }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+      gap: 25px;
+    }
+    .card {
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+      transition: transform .3s;
+    }
+    .card:hover { transform: translateY(-8px); }
+    .card h3 { color:#c62828; }
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+      gap: 20px;
+      text-align: center;
+    }
+    .steps div {
+      background: #fff;
+      padding: 25px;
+      border-radius: 10px;
+    }
+    .badge {
+      background:#c62828;
+      color:white;
+      display:inline-block;
+      padding:6px 14px;
+      border-radius:20px;
+      font-size:14px;
+    }
+    form {
+      background:white;
+      padding:40px;
+      border-radius:14px;
+      box-shadow:0 10px 25px rgba(0,0,0,0.1);
+    }
+    form input, form textarea, form select {
+      width:100%;
+      padding:14px;
+      margin:12px 0;
+      border-radius:6px;
+      border:1px solid #ccc;
+      font-family:inherit;
+    }
+    form button {
+      background:#c62828;
+      color:white;
+      border:none;
+      padding:14px;
+      font-size:16px;
+      border-radius:6px;
+      cursor:pointer;
+    }
+    footer {
+      background:#111;
+      color:#ccc;
+      text-align:center;
+      padding:30px 10px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Fix My Ride</h1>
+  <nav>
+    <a href="#">Home</a>
+    <a href="#services">Services</a>
+    <a href="#how">How It Works</a>
+    <a href="#book">Book</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <span class="badge">Startup-Ready Platform</span>
+  <h2>Instant Roadside Assistance</h2>
+  <p>Breakdown during travel? Book verified mechanics instantly with live location sharing and real-time support.</p>
+  <button onclick="document.getElementById('book').scrollIntoView()">Request Help Now</button>
+</section>
+
+<section id="services">
+  <h2>Our Core Services</h2>
+  <div class="grid">
+    <div class="card"><h3>Bike Assistance</h3><p>Puncture, engine failure, fuel delivery.</p><strong>From ₹199</strong></div>
+    <div class="card"><h3>Car Assistance</h3><p>Battery jump, tire change, minor fixes.</p><strong>From ₹399</strong></div>
+    <div class="card"><h3>Emergency Support</h3><p>Night-time and remote-area rescue.</p><strong>24/7</strong></div>
+  </div>
+</section>
+
+<section id="how">
+  <h2>How Fix My Ride Works</h2>
+  <div class="steps">
+    <div><h3>1</h3><p>Request service online</p></div>
+    <div><h3>2</h3><p>Share live location</p></div>
+    <div><h3>3</h3><p>Nearest mechanic dispatched</p></div>
+    <div><h3>4</h3><p>Problem fixed on-site</p></div>
+  </div>
+</section>
+
+<section id="book">
+  <h2>Book a Mechanic</h2>
+  <form onsubmit="event.preventDefault(); alert('Request submitted! Mechanic will contact you shortly.');">
+    <input type="text" placeholder="Full Name" required>
+    <input type="tel" placeholder="Phone Number" required>
+    <select required>
+      <option value="">Select Vehicle Type</option>
+      <option>Bike</option>
+      <option>Car</option>
+    </select>
+    <textarea rows="4" placeholder="Describe the issue"></textarea>
+    <input type="text" placeholder="Current Location / Address" required>
+    <button type="submit">Confirm Booking</button>
+  </form>
+</section>
+
+<footer>
+  <p>© 2026 Fix My Ride | A Startup-Ready Roadside Assistance Platform</p>
+</footer>
+
+<!-- LOGIN MODALS -->
+<section id="login" style="padding:60px 20px;max-width:1100px;margin:auto;">
+<h2>User Access (Demo)</h2>
+<div class="grid">
+<div class="card"><h3>Customer Login</h3><input placeholder="Email"><input placeholder="Password" type="password"><button>Login</button></div>
+<div class="card"><h3>Mechanic Login</h3><input placeholder="Mechanic ID"><input placeholder="Password" type="password"><button>Login</button></div>
+</div>
+</section>
+
+<!-- ADMIN DASHBOARD MOCKUP -->
+<section style="background:#f0f0f0;padding:70px 20px;">
+<h2 style="text-align:center">Admin Dashboard (Mockup)</h2>
+<div class="grid">
+<div class="card"><h3>Total Bookings</h3><p>124</p></div>
+<div class="card"><h3>Active Mechanics</h3><p>37</p></div>
+<div class="card"><h3>Live Requests</h3><p>5</p></div>
+</div>
+</section>
+
+<!-- LIVE LOCATION -->
+<section style="padding:60px 20px;text-align:center">
+<h2>Share Live Location</h2>
+<p>Click below to open Google Maps and share your live location with the mechanic.</p>
+<a href="https://www.google.com/maps" target="_blank"><button>Open Google Maps</button></a>
+</section>
+
+<script>
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('sw.js');
+}
+</script>
+
+</body>
+</html>
